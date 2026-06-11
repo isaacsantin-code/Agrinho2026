@@ -1,34 +1,38 @@
-document.getElementById('cisternaForm').addEventListener('submit', function(event) {
+document.getElementById('diagnosticoForm').addEventListener('submit', function(event) {
     event.preventDefault();
 
-    // Captura a área inserida pelo utilizador
-    const area = parseFloat(document.getElementById('areaTelhado').value) || 0;
+    // Captura os valores selecionados pelo utilizador
+    const cultura = document.getElementById('cultura').value;
+    const sintoma = document.getElementById('sintoma').value;
 
-    // Constantes para o cálculo:
-    // Precipitação média mensal na região (Clevelândia): ~160 mm
-    const precipitacaoMensal = 160; 
+    let diagnostico = "";
+    let tratamento = "";
+
+    // Lógica de diagnóstico baseada nos sintomas e culturas
+    if (sintoma === "po_avermelhado") {
+        diagnostico = "⚠️ Ferrugem (Fungo)";
+        tratamento = "A ferrugem asiática ou comum espalha-se rapidamente pelo vento. <strong>Solução sustentável:</strong> Aplicação de Calda Bordalesa (mistura de sulfato de cobre e cal) ou extrato de cavalinha. É importante também garantir um bom espaçamento entre as plantas para circular o ar.";
     
-    // Coeficiente de escoamento (perda de água por evaporação ou salpicos no telhado): 0.8 (80% de aproveitamento)
-    const coeficienteEscoamento = 0.8;
+    } else if (sintoma === "po_branco") {
+        diagnostico = "⚠️ Oídio (Fungo)";
+        tratamento = "Ocorre muito em épocas secas com noites húmidas. <strong>Solução sustentável:</strong> Pulverização com Calda de Leite cru a 10% (1 litro de leite para 9 litros de água). O leite atua como fungicida natural e ajuda a proteger a folha sob a luz do sol.";
+    
+    } else if (sintoma === "furos") {
+        diagnostico = "🐛 Ataque de Lagartas ou Besouros (Praga)";
+        tratamento = "Os insetos mastigadores estão a devorar a área foliar. <strong>Solução sustentável:</strong> Aplicação de Óleo de Neem ou Calda de Fumo. Para pequenas hortas, a catação manual ou atração de predadores naturais (como joaninhas e pássaros) é altamente recomendada.";
+    
+    } else if (sintoma === "amarela_murcha") {
+        diagnostico = "🥀 Deficiência Nutricional ou Podridão Radicular";
+        tratamento = "Pode ser falta de nitrogénio no solo ou excesso de água a apodrecer as raízes. <strong>Solução sustentável:</strong> Melhorar a drenagem do solo e aplicar adubação orgânica rica, como húmus de minhoca ou compostagem bem curtida. Evitar regar as folhas, focando apenas no solo.";
+    } else {
+        diagnostico = "Sintoma não reconhecido.";
+        tratamento = "Por favor, consulte um engenheiro agrónomo local para uma análise presencial.";
+    }
 
-    // Fórmula: Volume = Área (m²) x Precipitação (mm) x Coeficiente
-    const litrosMensais = area * precipitacaoMensal * coeficienteEscoamento;
+    // Exibe os resultados no ecrã
+    document.getElementById('nome-doenca').innerText = diagnostico;
+    document.getElementById('mensagem-tratamento').innerHTML = tratamento;
 
-    // --- Conversão Pedagógica para o Agrinho ---
-    // Uma horta consome em média cerca de 5 litros de água por m² ao dia (aprox. 150 litros por mês)
-    const consumoHortaMensalPorM2 = 150;
-    const tamanhoHortaM2 = litrosMensais / consumoHortaMensalPorM2;
-
-    // Atualiza a interface (ecrã) com os resultados
-    const areaResultado = document.getElementById('resultado');
-    const valorLitros = document.getElementById('valor-litros');
-    const mensagemImpacto = document.getElementById('mensagem-impacto');
-
-    // Formata o número para ter separador de milhares
-    valorLitros.innerText = Math.round(litrosMensais).toLocaleString('pt-PT') + " Litros / Mês";
-
-    mensagemImpacto.innerHTML = `Com <strong>${Math.round(litrosMensais).toLocaleString('pt-PT')} litros</strong> armazenados, é possível garantir a rega completa de uma horta de <strong>${Math.round(tamanhoHortaM2)} metros quadrados</strong> durante um mês inteiro, sem utilizar uma única gota da rede pública de água ou de nascentes!`;
-
-    // Mostra o resultado com a animação
-    areaResultado.className = 'resultado-visivel';
+    // Torna a caixa de resultados visível
+    document.getElementById('resultado').className = 'resultado-visivel';
 });
