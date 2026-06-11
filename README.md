@@ -1,43 +1,42 @@
-# 🌱 Projeto Agro Sustentável - Calculadora de Pegada de Carbono
+# 🌱 Projeto Agrinho 2026 - Educação e Sustentabilidade
 
-Este é um projeto escolar interativo desenvolvido para o projeto Agrinho, focado em unir tecnologia e sustentabilidade no campo. O objetivo principal é fornecer uma ferramenta simples e acessível para que agricultores possam medir e entender o impacto ambiental de suas atividades através do cálculo da pegada de carbono.
+Este é um projeto escolar interativo desenvolvido para o projeto Agrinho, focado em unir tecnologia, educação e sustentabilidade. O objetivo principal é fornecer uma página informativa e acessível para ensinar jovens e crianças sobre a importância do agronegócio sustentável, valores sociais e a conexão entre o campo e a cidade.
 
-Todo o processo de desenvolvimento e hospedagem foi feito diretamente no **GitHub**.
+Todo o processo de desenvolvimento e hospedagem pode ser feito diretamente no **GitHub**.
 
 ---
 
-## 📝 O que é a Pegada de Carbono?
+## 📝 O que é o Projeto Agrinho?
 
-A pegada de carbono é um indicador ambiental que mede o volume total de gases de efeito estufa (GEE) emitidos direta ou indiretamente por uma pessoa, organização, evento ou produto. 
+O Projeto Agrinho é uma iniciativa educacional que incentiva crianças e jovens a refletirem sobre cidadania, sustentabilidade e a preservação do meio ambiente. 
 
-Na agricultura, compreender esse número é fundamental para adotar práticas mais sustentáveis, reduzir o desperdício de insumos e ajudar a diminuir os impactos das mudanças climáticas.
+Compreender esses conceitos é fundamental para formar cidadãos mais conscientes, capazes de valorizar a produção agrícola sustentável e de adotar atitudes que ajudem a diminuir os impactos ambientais e climáticos na sociedade.
 
-## 🚀 Funcionalidades do Mini Aplicativo
+## 🚀 Conteúdo e Funcionalidades da Página
 
-O site possui um simulador prático focado em três pontos principais de consumo em uma propriedade rural:
+O site é uma *Landing Page* (página única) interativa focada nos principais pilares do projeto:
 
-1. **Consumo de Diesel (Litros):** Impacto gerado pelo uso de tratores e maquinários agrícolas.
-2. **Uso de Fertilizantes (Kg):** Emissões geradas pela aplicação de adubos na lavoura.
-3. **Consumo de Energia (kWh):** Impacto da eletricidade usada na propriedade.
-
-O usuário preenche os dados mensais e o aplicativo calcula instantaneamente a estimativa de emissões em quilogramas de CO₂, fornecendo um feedback visual para auxiliar na tomada de decisão do agricultor.
+1. **Agro Sustentável:** Apresentação de práticas conscientes de produção agrícola, como plantio direto, proteção de nascentes e uso racional de recursos.
+2. **Valores do Agrinho:** Destaque para princípios fundamentais como respeito ao próximo, solidariedade, responsabilidade e cidadania.
+3. **Atividades e Aprendizado:** Exemplos de ações práticas para as escolas, como hortas escolares e projetos de preservação.
+4. **Interatividade:** O usuário conta com um botão dinâmico na seção de atividades que, ao ser clicado, revela uma mensagem inspiradora sobre o papel do jovem na construção do futuro.
 
 ## 🛠️ Tecnologias Utilizadas
 
-Para garantir a simplicidade e a viabilidade do projeto, utilizamos apenas as tecnologias fundamentais do desenvolvimento web:
+Para garantir a simplicidade, leveza e a viabilidade do projeto, utilizamos as tecnologias fundamentais do desenvolvimento web:
 
-* **HTML:** Estruturação semântica do site e do formulário interativo.
-* **CSS:** Estilização responsiva com uma paleta de cores voltada para o meio ambiente e a agricultura.
-* **JavaScript:** Lógica por trás do cálculo matemático de emissões e interatividade da interface.
+* **HTML:** Estruturação semântica do site, divisão de seções e integração de imagens.
+* **CSS:** Estilização visual com animações suaves de entrada, efeitos de transição (hover) e uma paleta de cores inspirada na natureza.
+* **JavaScript:** Lógica por trás do botão interativo para exibição dinâmica de mensagens na tela do usuário.
 * **GitHub e GitHub Pages:** Versionamento de código e hospedagem gratuita do site diretamente pelo navegador.
 
 ## 💻 Como Acessar o Projeto
 
 Como o site está hospedado no GitHub Pages, você pode acessá-lo diretamente de qualquer navegador de internet, seja no celular ou no computador, através do link gerado pelo GitHub:
 
-**[Insira aqui o link do seu GitHub Pages gerado]**
+**https://isaacsantin-code.github.io/Agrinho2026/**
 
 ---
 
-**Desenvolvido por:** Isaac   
-**Contexto:** Projeto Agrinho 
+**Desenvolvido por:** Isaac Santin  
+**Contexto:** Projeto Agrinho 2026
