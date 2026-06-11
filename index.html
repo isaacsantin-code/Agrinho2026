@@ -3,56 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora de Biodefensivos - Agrinho</title>
+    <title>Catálogo Interativo - Doces & Bolos</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>🌿 Biodefensivo Exato</h1>
-        <p>Receitas ecológicas sob medida para o seu pulverizador.</p>
+        <h1>🧁 Doces & Delícias</h1>
+        <p>Monte o seu pedido personalizado e envie direto para o nosso WhatsApp!</p>
     </header>
 
     <main>
-        <section class="info-section">
-            <h2>Por que usar caldas naturais?</h2>
-            <p>Os biodefensivos protegem a sua lavoura de forma sustentável, sem agredir o solo, os polinizadores e a saúde de quem consome os alimentos. Calcule a dose exata para evitar desperdícios.</p>
-        </section>
-
-        <section class="app-section">
-            <h2>Calcule a sua Receita</h2>
-            
-            <form id="receitaForm">
+        <form id="pedidoForm">
+            <!-- SEÇÃO DE BOLOS -->
+            <section class="menu-section">
+                <h2>🎂 Escolha o seu Bolo</h2>
                 <div class="input-group">
-                    <label for="problema">Qual é o problema na lavoura?</label>
-                    <select id="problema" required>
-                        <option value="" disabled selected>Selecione a praga ou doença...</option>
-                        <option value="pulgoes">Pulgões e Cochonilhas (Insetos sugadores)</option>
-                        <option value="lagartas">Lagartas e Besouros (Insetos mastigadores)</option>
-                        <option value="fungos">Fungos nas folhas (Oídio, Ferrugem)</option>
+                    <label for="bolo">Sabor e Tamanho:</label>
+                    <select id="bolo">
+                        <option value="0" data-nome="Nenhum">Nenhum bolo</option>
+                        <option value="85" data-nome="Bolo de Chocolate (1.5kg) - R$ 85,00">Bolo de Chocolate (1.5kg) - R$ 85,00</option>
+                        <option value="110" data-nome="Bolo de Morango com Ninho (1.5kg) - R$ 110,00">Bolo de Morango com Ninho (1.5kg) - R$ 110,00</option>
+                        <option value="150" data-nome="Bolo Festa Red Velvet (2kg) - R$ 150,00">Bolo Festa Red Velvet (2kg) - R$ 150,00</option>
                     </select>
                 </div>
+            </section>
 
-                <div class="input-group">
-                    <label for="litros">Capacidade do Pulverizador (em Litros):</label>
-                    <input type="number" id="litros" placeholder="Ex: 5 ou 20" required min="1">
-                </div>
-
-                <button type="submit">Calcular Receita Proporcional</button>
-            </form>
-
-            <div id="resultado" class="resultado-oculto">
-                <h3>Sua Receita Calculada:</h3>
-                <h4 id="nome-receita">Receita</h4>
+            <!-- SEÇÃO DE DOCINHOS -->
+            <section class="menu-section">
+                <h2>🍬 Centos de Docinhos</h2>
+                <p class="dica">Digite a quantidade de centos (ex: 1 = 100 docinhos, 2 = 200 docinhos)</p>
                 
-                <div class="receita-box">
-                    <h4>📝 Ingredientes Exatos:</h4>
-                    <ul id="lista-ingredientes"></ul>
-                    
-                    <h4 class="mt-15">👨‍🌾 Modo de Preparo e Aplicação:</h4>
-                    <p id="modo-preparo"></p>
+                <div class="input-group doces-grid">
+                    <div class="doce-item">
+                        <label for="brigadeiro">Brigadeiro Tradicional (R$ 70/cento)</label>
+                        <input type="number" id="brigadeiro" class="qtd-doce" data-preco="70" data-nome="Cento de Brigadeiro" min="0" placeholder="0">
+                    </div>
+                    <div class="doce-item">
+                        <label for="beijinho">Beijinho de Coco (R$ 70/cento)</label>
+                        <input type="number" id="beijinho" class="qtd-doce" data-preco="70" data-nome="Cento de Beijinho" min="0" placeholder="0">
+                    </div>
+                    <div class="doce-item">
+                        <label for="surpresa">Surpresa de Uva (R$ 85/cento)</label>
+                        <input type="number" id="surpresa" class="qtd-doce" data-preco="85" data-nome="Cento de Surpresa de Uva" min="0" placeholder="0">
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
+
+            <!-- SEÇÃO DE CAIXA/EMBALAGEM -->
+            <section class="menu-section">
+                <h2>🎁 Embalagem Personalizada</h2>
+                <div class="input-group">
+                    <label for="embalagem">Tipo de Caixa:</label>
+                    <select id="embalagem">
+                        <option value="0" data-nome="Caixa Padrão Branca">Caixa Padrão Branca (Grátis)</option>
+                        <option value="15" data-nome="Caixa Presente com Laço - R$ 15,00">Caixa Presente com Laço - R$ 15,00</option>
+                        <option value="25" data-nome="Caixa Luxo Transparente - R$ 25,00">Caixa Luxo Transparente - R$ 25,00</option>
+                    </select>
+                </div>
+            </section>
+
+            <!-- RESUMO E BOTÃO WHATSAPP -->
+            <section class="checkout-section">
+                <h2>Resumo do Pedido</h2>
+                <div class="total-box">
+                    <span>Total Estimado:</span>
+                    <strong id="valorTotal">R$ 0,00</strong>
+                </div>
+                
+                <button type="submit" class="btn-whatsapp">
+                    📲 Enviar Pedido por WhatsApp
+                </button>
+            </section>
+        </form>
     </main>
 
     <script src="script.js"></script>
