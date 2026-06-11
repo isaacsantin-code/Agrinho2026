@@ -1,34 +1,32 @@
-# 🌱 Projeto Agro Sustentável - Calculadora de Pegada de Carbono
+# 🌧️ Projeto Agrinho - Cisterna Inteligente (Captação de Água)
 
-Este é um projeto escolar interativo desenvolvido para o projeto Agrinho, focado em unir tecnologia e sustentabilidade no campo. O objetivo principal é fornecer uma ferramenta simples e acessível para que agricultores possam medir e entender o impacto ambiental de suas atividades através do cálculo da pegada de carbono.
+Este é um projeto escolar interativo desenvolvido para o projeto Agrinho, focado em unir tecnologia e sustentabilidade na gestão de recursos hídricos no campo. O objetivo principal é fornecer uma ferramenta simples e acessível para que agricultores possam calcular o potencial de captação de água da chuva em suas propriedades.
 
 Todo o processo de desenvolvimento e hospedagem foi feito diretamente no **GitHub**.
 
 ---
 
-## 📝 O que é a Pegada de Carbono?
+## 📝 Por que captar a água da chuva?
 
-A pegada de carbono é um indicador ambiental que mede o volume total de gases de efeito estufa (GEE) emitidos direta ou indiretamente por uma pessoa, organização, evento ou produto. 
+O aproveitamento da água da chuva é uma prática fundamental para garantir a segurança hídrica nas propriedades rurais, especialmente durante os períodos de seca. 
 
-Na agricultura, compreender esse número é fundamental para adotar práticas mais sustentáveis, reduzir o desperdício de insumos e ajudar a diminuir os impactos das mudanças climáticas.
+Na agricultura, entender o potencial de captação dos telhados (de estufas, galpões ou casas) ajuda a reduzir a dependência de fontes externas, diminuir os custos e promover o uso consciente e ecológico da água para a irrigação de hortas e manutenção da propriedade.
 
 ## 🚀 Funcionalidades do Mini Aplicativo
 
-O site possui um simulador prático focado em três pontos principais de consumo em uma propriedade rural:
+O site possui um simulador prático focado na realidade climática e focado em gerar dados úteis para o agricultor:
 
-1. **Consumo de Diesel (Litros):** Impacto gerado pelo uso de tratores e maquinários agrícolas.
-2. **Uso de Fertilizantes (Kg):** Emissões geradas pela aplicação de adubos na lavoura.
-3. **Consumo de Energia (kWh):** Impacto da eletricidade usada na propriedade.
-
-O usuário preenche os dados mensais e o aplicativo calcula instantaneamente a estimativa de emissões em quilogramas de CO₂, fornecendo um feedback visual para auxiliar na tomada de decisão do agricultor.
+1. **Área do Telhado (m²):** O usuário insere o tamanho da estrutura disponível para captação na sua propriedade.
+2. **Cálculo de Volume (Litros):** Utilizando a média de chuvas da região (aproximadamente 160 mm mensais para Clevelândia e arredores), o sistema calcula automaticamente a estimativa de litros de água que podem ser armazenados em uma cisterna.
+3. **Conversão de Impacto:** O aplicativo converte o volume de água captado em uma métrica real para o produtor (mostrando o tamanho exato de uma horta que poderia ser sustentada apenas com essa água recolhida).
 
 ## 🛠️ Tecnologias Utilizadas
 
 Para garantir a simplicidade e a viabilidade do projeto, utilizamos apenas as tecnologias fundamentais do desenvolvimento web:
 
 * **HTML:** Estruturação semântica do site e do formulário interativo.
-* **CSS:** Estilização responsiva com uma paleta de cores voltada para o meio ambiente e a agricultura.
-* **JavaScript:** Lógica por trás do cálculo matemático de emissões e interatividade da interface.
+* **CSS:** Estilização responsiva com uma paleta de cores voltada para a água e a natureza.
+* **JavaScript:** Lógica por trás do cálculo matemático de captação e interatividade da interface.
 * **GitHub e GitHub Pages:** Versionamento de código e hospedagem gratuita do site diretamente pelo navegador.
 
 ## 💻 Como Acessar o Projeto
@@ -39,5 +37,5 @@ Como o site está hospedado no GitHub Pages, você pode acessá-lo diretamente d
 
 ---
 
-**Desenvolvido por:** [Seu Nome ou Nome do Grupo]  
+**Desenvolvido por:** 
 **Contexto:** Projeto Agrinho
