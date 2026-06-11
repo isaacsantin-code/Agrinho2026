@@ -6,13 +6,13 @@
 }
 
 body {
-    background-color: #f1f8e9; /* Fundo verde muito claro */
+    background-color: #f1f8e9;
     color: #333;
     line-height: 1.6;
 }
 
 header {
-    background-color: #33691e; /* Verde musgo escuro */
+    background-color: #2e7d32;
     color: white;
     text-align: center;
     padding: 2.5rem 1rem;
@@ -36,11 +36,11 @@ main {
 }
 
 .info-section {
-    border-left: 5px solid #689f38;
+    border-left: 5px solid #8bc34a;
 }
 
 h2 {
-    color: #33691e;
+    color: #2e7d32;
     margin-bottom: 1rem;
 }
 
@@ -55,7 +55,7 @@ label {
     color: #558b2f;
 }
 
-select {
+select, input {
     width: 100%;
     padding: 1rem;
     border: 1px solid #c5e1a5;
@@ -68,7 +68,7 @@ button {
     display: block;
     width: 100%;
     padding: 1rem;
-    background-color: #558b2f;
+    background-color: #4caf50;
     color: white;
     border: none;
     border-radius: 6px;
@@ -79,7 +79,7 @@ button {
 }
 
 button:hover {
-    background-color: #33691e;
+    background-color: #388e3c;
 }
 
 .resultado-oculto {
@@ -90,29 +90,38 @@ button:hover {
     display: block;
     margin-top: 2rem;
     padding: 1.5rem;
-    background-color: #fff8e1; /* Fundo amarelado de alerta */
+    background-color: #e8f5e9;
     border-radius: 8px;
-    border: 2px solid #ffb300;
+    border: 2px solid #8bc34a;
     animation: fadeIn 0.5s ease-in-out;
 }
 
-#nome-doenca {
-    font-size: 1.5rem;
-    color: #d84315; /* Laranja escuro para alerta de doença */
+#nome-receita {
+    font-size: 1.4rem;
+    color: #1b5e20;
     margin-bottom: 1rem;
 }
 
-.tratamento-box {
+.receita-box {
     background-color: white;
-    padding: 1.2rem;
+    padding: 1.5rem;
     border-radius: 6px;
     border-left: 5px solid #4caf50;
     text-align: left;
 }
 
-.tratamento-box h4 {
+.receita-box h4 {
     color: #2e7d32;
     margin-bottom: 0.5rem;
+}
+
+.receita-box ul {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.mt-15 {
+    margin-top: 15px;
 }
 
 @keyframes fadeIn {
