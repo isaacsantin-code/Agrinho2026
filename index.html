@@ -3,41 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cisterna Inteligente - Projeto Agrinho</title>
+    <title>AgroDiagnóstico - Projeto Agrinho</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>🌧️ Cisterna Inteligente</h1>
-        <p>Projeto Agrinho: Gestão inteligente da água na propriedade rural.</p>
+        <h1>🌱 AgroDiagnóstico</h1>
+        <p>Identificação rápida de doenças e pragas com soluções sustentáveis.</p>
     </header>
 
     <main>
         <section class="info-section">
-            <h2>Porquê captar a água da chuva?</h2>
-            <p>O aproveitamento da água da chuva reduz a dependência de fontes externas, garante segurança hídrica nos períodos de seca e promove a sustentabilidade da propriedade agrícola.</p>
+            <h2>Como funciona?</h2>
+            <p>Selecione a cultura e o sintoma principal que está a observar nas plantas. O nosso sistema irá sugerir a causa mais provável e uma alternativa ecológica para o controlo, reduzindo o uso de químicos agressivos.</p>
         </section>
 
         <section class="app-section">
-            <h2>Simulador de Captação Mensal</h2>
-            <p>Insira o tamanho do telhado (da sua estufa, galpão ou casa) para descobrir o potencial de recolha de água na nossa região.</p>
+            <h2>Sintomas da Planta</h2>
             
-            <form id="cisternaForm">
+            <form id="diagnosticoForm">
                 <div class="input-group">
-                    <label for="areaTelhado">Área do Telhado (em metros quadrados - m²):</label>
-                    <input type="number" id="areaTelhado" placeholder="Ex: 50" required min="1">
+                    <label for="cultura">Qual é a cultura?</label>
+                    <select id="cultura" required>
+                        <option value="" disabled selected>Selecione uma opção...</option>
+                        <option value="soja_feijao">Soja / Feijão</option>
+                        <option value="hortalicas">Hortaliças (Tomate, Alface, etc.)</option>
+                        <option value="milho_trigo">Milho / Trigo</option>
+                    </select>
                 </div>
 
-                <button type="submit">Calcular Captação de Água</button>
+                <div class="input-group">
+                    <label for="sintoma">O que observa nas folhas ou caule?</label>
+                    <select id="sintoma" required>
+                        <option value="" disabled selected>Selecione o sintoma...</option>
+                        <option value="po_avermelhado">Manchas com pó avermelhado/alaranjado na parte inferior da folha</option>
+                        <option value="po_branco">Manchas brancas com aspeto de pó (cinza) na folha</option>
+                        <option value="furos">Folhas roídas, furadas ou cortadas</option>
+                        <option value="amarela_murcha">Folhas a ficarem amarelas e a murchar desde a base</option>
+                    </select>
+                </div>
+
+                <button type="submit">Analisar Sintomas</button>
             </form>
 
             <div id="resultado" class="resultado-oculto">
-                <h3>Potencial de Recolha Mensal:</h3>
-                <p id="valor-litros">0 Litros</p>
+                <h3>Resultado da Análise:</h3>
+                <h4 id="nome-doenca">Diagnóstico...</h4>
                 
-                <div class="impacto-box">
-                    <h4>🌱 O que isso significa na prática?</h4>
-                    <p id="mensagem-impacto"></p>
+                <div class="tratamento-box">
+                    <h4>🍃 Tratamento Ecológico / Manejo:</h4>
+                    <p id="mensagem-tratamento"></p>
                 </div>
             </div>
         </section>
