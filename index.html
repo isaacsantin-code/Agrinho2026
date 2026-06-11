@@ -1,58 +1,55 @@
 <!DOCTYPE html>
-<html lang="pt-PT">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AgroDiagnóstico - Projeto Agrinho</title>
+    <title>Calculadora de Biodefensivos - Agrinho</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>🌱 AgroDiagnóstico</h1>
-        <p>Identificação rápida de doenças e pragas com soluções sustentáveis.</p>
+        <h1>🌿 Biodefensivo Exato</h1>
+        <p>Receitas ecológicas sob medida para o seu pulverizador.</p>
     </header>
 
     <main>
         <section class="info-section">
-            <h2>Como funciona?</h2>
-            <p>Selecione a cultura e o sintoma principal que está a observar nas plantas. O nosso sistema irá sugerir a causa mais provável e uma alternativa ecológica para o controlo, reduzindo o uso de químicos agressivos.</p>
+            <h2>Por que usar caldas naturais?</h2>
+            <p>Os biodefensivos protegem a sua lavoura de forma sustentável, sem agredir o solo, os polinizadores e a saúde de quem consome os alimentos. Calcule a dose exata para evitar desperdícios.</p>
         </section>
 
         <section class="app-section">
-            <h2>Sintomas da Planta</h2>
+            <h2>Calcule a sua Receita</h2>
             
-            <form id="diagnosticoForm">
+            <form id="receitaForm">
                 <div class="input-group">
-                    <label for="cultura">Qual é a cultura?</label>
-                    <select id="cultura" required>
-                        <option value="" disabled selected>Selecione uma opção...</option>
-                        <option value="soja_feijao">Soja / Feijão</option>
-                        <option value="hortalicas">Hortaliças (Tomate, Alface, etc.)</option>
-                        <option value="milho_trigo">Milho / Trigo</option>
+                    <label for="problema">Qual é o problema na lavoura?</label>
+                    <select id="problema" required>
+                        <option value="" disabled selected>Selecione a praga ou doença...</option>
+                        <option value="pulgoes">Pulgões e Cochonilhas (Insetos sugadores)</option>
+                        <option value="lagartas">Lagartas e Besouros (Insetos mastigadores)</option>
+                        <option value="fungos">Fungos nas folhas (Oídio, Ferrugem)</option>
                     </select>
                 </div>
 
                 <div class="input-group">
-                    <label for="sintoma">O que observa nas folhas ou caule?</label>
-                    <select id="sintoma" required>
-                        <option value="" disabled selected>Selecione o sintoma...</option>
-                        <option value="po_avermelhado">Manchas com pó avermelhado/alaranjado na parte inferior da folha</option>
-                        <option value="po_branco">Manchas brancas com aspeto de pó (cinza) na folha</option>
-                        <option value="furos">Folhas roídas, furadas ou cortadas</option>
-                        <option value="amarela_murcha">Folhas a ficarem amarelas e a murchar desde a base</option>
-                    </select>
+                    <label for="litros">Capacidade do Pulverizador (em Litros):</label>
+                    <input type="number" id="litros" placeholder="Ex: 5 ou 20" required min="1">
                 </div>
 
-                <button type="submit">Analisar Sintomas</button>
+                <button type="submit">Calcular Receita Proporcional</button>
             </form>
 
             <div id="resultado" class="resultado-oculto">
-                <h3>Resultado da Análise:</h3>
-                <h4 id="nome-doenca">Diagnóstico...</h4>
+                <h3>Sua Receita Calculada:</h3>
+                <h4 id="nome-receita">Receita</h4>
                 
-                <div class="tratamento-box">
-                    <h4>🍃 Tratamento Ecológico / Manejo:</h4>
-                    <p id="mensagem-tratamento"></p>
+                <div class="receita-box">
+                    <h4>📝 Ingredientes Exatos:</h4>
+                    <ul id="lista-ingredientes"></ul>
+                    
+                    <h4 class="mt-15">👨‍🌾 Modo de Preparo e Aplicação:</h4>
+                    <p id="modo-preparo"></p>
                 </div>
             </div>
         </section>
